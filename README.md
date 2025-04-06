@@ -1,79 +1,72 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Paletón - Helados</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('https://source.unsplash.com/1600x900/?ice-cream'); /* Fondo de helados */
-            background-size: cover;
-            background-position: center;
-            text-align: center;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 400px;
-            margin: 50px auto;
-        }
-        img {
-            width: 150px;
-            border-radius: 10px;
-        }
-        h1 {
-            font-size: 28px;
-            margin: 10px 0;
-        }
-        .product {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-        }
-        .product span {
-            font-size: 18px;
-        }
-        .button {
-            display: inline-block;
-            background: #ffcc00;
-            color: #000;
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-    </style>
+    <title>El Paletón</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <!-- Fuente Poppins desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <div class="container">
-        <img src="Paleton.png" alt="Logo El Paletón"> 
+    <header role="banner">
+        <img src="logo.png" alt="Logo El Paletón" class="logo" role="img">
         <h1>El Paletón</h1>
-        <p>📍 Habana del Este, Alamar</p>
-        
-        <h2>🍦 Paletas - 100 CUP</h2>
-        <div class="product"><span>Chocolate</span></div>
-        <div class="product"><span>Fresa</span></div>
-        <div class="product"><span>Naranja Piña</span></div>
+        <p class="ubicacion" role="contentinfo">📍 Habana del Este, Alamar</p>
+    </header>
 
-        <h2>🍨 Vasos de Helado - 80 CUP</h2>
-        <div class="product"><span>Chocolate</span></div>
-        <div class="product"><span>Fresa</span></div>
-        <div class="product"><span>Naranja Piña</span></div>
+    <section class="galeria">
+        <h2>Paletas (100 CUP)</h2>
+        <div class="productos">
+            <div class="producto">
+                <img src="paleta-chocolate.png" alt="Chocolate">
+                <p>Chocolate 🍫</p>
+            </div>
+            <div class="producto">
+                <img src="paleta-fresa.png" alt="Fresa">
+                <p>Fresa 🍓</p>
+            </div>
+            <div class="producto">
+                <img src="paleta-naranja.png" alt="Naranja Piña">
+                <p>Naranja-Piña 🍊🍍</p>
+            </div>
+        </div>
 
-        <a href="https://wa.me/53875602" class="button">📲 Pedir por WhatsApp</a>
-    </div>
+        <h2>Vasos de helado (80 CUP)</h2>
+        <div class="productos">
+            <div class="producto">
+                <img src="vaso-chocolate.png" alt="Chocolate Vaso">
+                <p>Chocolate 🍫</p>
+            </div>
+            <div class="producto">
+                <img src="vaso-fresa.png" alt="Fresa Vaso">
+                <p>Fresa 🍓</p>
+            </div>
+            <div class="producto">
+                <img src="vaso-naranja.png" alt="Naranja Piña Vaso">
+                <p>Naranja-Piña 🍊🍍</p>
+            </div>
+        </div>
+    </section>
 
+    <section class="formulario-contacto">
+        <h2>Haz tu pedido</h2>
+        <form action="https://formspree.io/f/mwkgywzb" method="POST">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="tel" name="telefono" placeholder="Tu teléfono" required>
+            <input type="text" name="sabor" placeholder="Sabor" required>
+            <input type="number" name="cantidad" placeholder="Cantidad" min="1" required>
+            <button type="submit" class="submit-button">Enviar pedido 🚀</button>
+        </form>
+    </section>
+
+    <a href="https://wa.me/5353875602" class="whatsapp-button" target="_blank">💬 Escríbenos por WhatsApp</a>
+    
+
+    <footer>
+        <p>© 2025 El Paletón 🍦</p>
+    </footer>
 </body>
 </html>
